@@ -23,5 +23,7 @@ v1.0
 ##视频播放
 - 基于B站的[ijkplayer](https://github.com/Bilibili/ijkplayer)
 
-##Material Design Demo
-- 
+##其他
+- 友盟统计、分享的封装
+- Material design demo
+
