@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.myshare.dialogdemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="dialog常用法"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/confirmbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="确认对话框" />
+
+        <Button
+            android:id="@+id/morebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多个操作按钮" />
+
+        <Button
+            android:id="@+id/samplembtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单view对话框" />
+
+        <Button
+            android:id="@+id/siglebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选对话框" />
+
+        <Button
+            android:id="@+id/multibtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多选对话框" />
+
+        <Button
+            android:id="@+id/selfviewbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义view" />
+
+        <Button
+            android:id="@+id/selfdialogbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="popwindow常用法
+    PopupWindow这个类用来实现一个弹出框，可以使用任意布局的View作为其内容，这个弹出框是悬浮在当前activity之上的。"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/popofenbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pop常用法" />
+
+        <Button
+            android:id="@+id/popselfbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pop自定义"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

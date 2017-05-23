@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hz.com.androidlib">
+
+    <!-- Required 一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 蒲公英-待输入真实账号-->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="123123123123123132" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".list.ListDemoActivity" />
+        <activity android:name=".CalenderActivity" />
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".guide.GuideActivity" />
+        <activity android:name=".utils.UtilsDemoActivity" />
+        <activity android:name=".record.RecordDemoActivity" />
+        <activity android:name=".index.ShopIndexDemoActivity" />
+        <activity android:name=".index.TabIndexDemoActivity" />
+        <activity android:name=".listitem.ListItemActivity" />
+        <activity android:name=".permission.PermissionDemoActivity" />
+        <activity android:name=".dialog.DialogDemoActivity" />
+        <activity android:name=".contact.ContactActivity" />
+        <activity android:name=".listitem.activity.GoodsListActivity" />
+        <activity android:name=".listitem.activity.GrabOrderActivity" />
+        <activity android:name=".listitem.activity.NewsListActivity" />
+        <activity android:name=".listitem.activity.WaterFallActivity" />
+        <activity android:name=".list.ListTargetActivity"></activity>
+
+    </application>
+
+</manifest>

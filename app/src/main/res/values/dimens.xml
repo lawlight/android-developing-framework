@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="dimen5dp">5dp</dimen>
+    <dimen name="dimen10dp">10dp</dimen>
+    <dimen name="dimen20dp">20dp</dimen>
+    <dimen name="dimen25dp">25dp</dimen>
+    <dimen name="dimen30dp">30dp</dimen>
+
+    <dimen name="text_size_16">16sp</dimen>
+
+    <!-- 高德地图-->
+    <dimen name="margin_middle">2dp</dimen>
+    <dimen name="normal_margin">10dp</dimen>
+</resources>

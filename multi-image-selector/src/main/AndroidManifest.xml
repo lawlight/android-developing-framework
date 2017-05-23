@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.nereo.multi_image_selector">
+
+    <application android:allowBackup="true">
+        <activity
+            android:name=".MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ImageViewPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,1 @@
+include ':app', ':lib', ':multi-image-selector', ':qrcode', ':audiorecorder', ':material-design-demo', ':amap', ':ijkplayer', ':umeng'

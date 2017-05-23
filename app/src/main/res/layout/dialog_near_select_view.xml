@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="性别"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/sexgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/sex_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:text="全部" />
+
+        <RadioButton
+            android:id="@+id/sex_man"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:paddingLeft="@dimen/dimen25dp"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/sex_woman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:paddingLeft="@dimen/dimen25dp"
+            android:text="女" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginLeft="@dimen/dimen20dp"
+        android:layout_marginRight="@dimen/dimen20dp"
+        android:background="@color/line_1px" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen20dp"
+        android:layout_marginTop="@dimen/dimen10dp"
+        android:text="活跃"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16" />
+
+    <RadioGroup
+        android:id="@+id/activegroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen5dp"
+        android:layout_marginRight="@dimen/dimen5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/active_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:text="不限" />
+
+        <RadioButton
+            android:id="@+id/active_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+
+            android:padding="@dimen/dimen5dp"
+            android:text="15分钟" />
+
+        <RadioButton
+            android:id="@+id/active_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:text="60分钟" />
+
+        <RadioButton
+            android:id="@+id/active_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:text="1天" />
+
+        <RadioButton
+            android:id="@+id/active_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:text="3天+" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginLeft="@dimen/dimen20dp"
+        android:layout_marginRight="@dimen/dimen20dp"
+        android:background="@color/line_1px" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen20dp"
+        android:layout_marginTop="@dimen/dimen10dp"
+        android:text="排序"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16" />
+
+    <RadioGroup
+        android:id="@+id/sortgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/sort_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:text="距离" />
+
+        <RadioButton
+            android:id="@+id/sort_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:paddingLeft="@dimen/dimen25dp"
+            android:text="鲜花" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginLeft="@dimen/dimen20dp"
+        android:layout_marginRight="@dimen/dimen20dp"
+        android:background="@color/line_1px" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen20dp"
+        android:layout_marginTop="@dimen/dimen10dp"
+        android:text="年龄"
+
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16" />
+
+    <RadioGroup
+        android:id="@+id/agegroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen10dp"
+        android:layout_marginLeft="@dimen/dimen5dp"
+        android:layout_marginRight="@dimen/dimen5dp"
+        android:layout_marginTop="@dimen/dimen10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/age_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:text="不限" />
+
+        <RadioButton
+            android:id="@+id/age_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:paddingLeft="@dimen/dimen10dp"
+            android:text="18-22" />
+
+        <RadioButton
+            android:id="@+id/age_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:paddingLeft="@dimen/dimen10dp"
+            android:text="22-26" />
+
+        <RadioButton
+            android:id="@+id/age_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:paddingLeft="@dimen/dimen10dp"
+            android:text="27-35" />
+
+        <RadioButton
+            android:id="@+id/age_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen5dp"
+            android:paddingLeft="@dimen/dimen10dp"
+            android:text="35+" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen10dp">
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen30dp"
+            android:layout_marginRight="@dimen/dimen20dp"
+            android:layout_toLeftOf="@+id/btn_ok"
+            android:background="@color/white"
+            android:text="取消"
+            android:textColor="@color/littleBlue"
+            android:textSize="@dimen/text_size_16" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen20dp"
+            android:background="@color/white"
+            android:text="确定"
+            android:textColor="@color/littleBlue"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+</LinearLayout>

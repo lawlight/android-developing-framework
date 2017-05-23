@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义标题栏属性 -->
+    <declare-styleable name="TitleView">
+        <!-- 标题 -->
+        <attr name="titleText" format="string"/>
+        <!-- 是否显示左按钮 -->
+        <attr name="isShowLeftButton" format="boolean"/>
+        <!-- 是否显示右按钮 -->
+        <attr name="isShowRightButton" format="boolean"/>
+    </declare-styleable>
+
+
+
+</resources>

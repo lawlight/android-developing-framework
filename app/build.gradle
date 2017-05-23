@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "hz.com.androidlib"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //签名设置
+    signingConfigs {
+        //MD5: A2:1F:B2:CD:E7:C0:D9:A7:E0:AE:50:A0:12:5E:E0:33
+        //SHA1: 5A:08:A9:C7:CA:A2:2C:CD:65:EB:85:45:25:22:21:FB:CD:77:A1:00
+        debug {
+            storeFile file("huazheng.jks")
+            storePassword "huazheng"
+            keyAlias "huazheng"
+            keyPassword "huazheng"
+        }
+    }
+
+    // 友盟多渠道打包
+//    productFlavors {
+//        beta {}
+//        wandoujia {}
+//        _360 {}
+//        baidu {}
+//        yingyongbao {}
+//    }
+
+//    productFlavors.all { flavor ->
+//        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//    }
+
+    //Jni文件目录修改为libs
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    //防止打包时报错
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile project(':lib')
+    compile project(':multi-image-selector')
+    compile project(':qrcode')
+    compile project(':umeng')
+    compile project(':audiorecorder')
+    compile project(':amap')
+    compile project(':ijkplayer')
+}
+
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}

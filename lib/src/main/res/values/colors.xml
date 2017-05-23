@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1ab3e5</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#fb6238</color>
+    <color name="colorBackground">#eeeeee</color>
+
+    <!-- 线颜色 -->
+    <color name="colorLine">#cccccc</color>
+
+    <!-- 文本颜色 -->
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="colorTextBlack">#333333</color>
+    <color name="colorTextGray">#999999</color>
+    <color name="colorTextRed">#FD0D01</color>
+    <color name="colorTextOrange">#EB6100</color>
+
+    <!-- 辅助背景色 -->
+    <color name="colorBackgroundWhite">#ffffff</color>
+    <color name="colorBackgroundWhite2">#fcfcfc</color>
+</resources>
