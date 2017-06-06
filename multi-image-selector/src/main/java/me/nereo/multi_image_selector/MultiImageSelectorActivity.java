@@ -1,5 +1,6 @@
 package me.nereo.multi_image_selector;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.widget.Button;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 仿微信的多图选择Activity
@@ -34,6 +36,34 @@ public class MultiImageSelectorActivity extends FragmentActivity implements Mult
     private ArrayList<String> resultList = new ArrayList<>();
     private Button mSubmitButton;
     private int mDefaultCount;
+
+    /**
+     * 打开图片选择界面
+     * @param activity
+     * @param maxCount 最大图片选择数
+     * @param showCamera 是否显示相机按钮
+     * @param requestCode 请求code
+     */
+    public static void intentTo(Activity activity, int maxCount, boolean showCamera, int requestCode){
+        Intent intent = new Intent(activity, MultiImageSelectorActivity.class);
+        intent.putExtra(EXTRA_SELECT_COUNT, maxCount);
+        intent.putExtra(EXTRA_SHOW_CAMERA, showCamera);
+        intent.putExtra(EXTRA_SELECT_MODE, maxCount <= 1 ? MODE_SINGLE : MODE_MULTI);
+        activity.startActivityForResult(intent, requestCode);
+    }
+
+    /**
+     * 获取单张图片结果
+     * @param data 返回结果集
+     * @return 图片地址
+     */
+    public static String getSingleResult(Intent data){
+        List<String> list = data.getStringArrayListExtra(EXTRA_RESULT);
+        if(list != null && list.size() > 0){
+            return list.get(0);
+        }
+        return null;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

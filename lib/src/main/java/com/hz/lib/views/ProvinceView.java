@@ -127,13 +127,6 @@ public class ProvinceView extends LinearLayout {
 
     /**
      * 初始化数据
-     * @param provinceId 省代码，不选择填null
-     * @param cityId 市代码，不选择填null
-     * @param countyId 区代码，不选择填null
-     */
-
-    /**
-     * 初始化数据
      * @param provinceAPI 省接口
      * @param cityAPI 市接口
      * @param countyAPI 区接口
@@ -177,38 +170,49 @@ public class ProvinceView extends LinearLayout {
         spnCity = (Spinner) view.findViewById(R.id.spn_city);
         spnCounty = (Spinner) view.findViewById(R.id.spn_county);
 
-        //联动
-        spnProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                KV kv = (KV) parent.getItemAtPosition(position);
-                cityAPI.setId(kv.key);
-                loadCity();
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        spnCity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                KV kv = (KV) parent.getItemAtPosition(position);
-                countyAPI.setId(kv.key);
-                loadCounty();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
         spnProvince.setEnabled(false);
         spnCity.setEnabled(false);
         spnCounty.setEnabled(false);
+    }
+
+    /**
+     * 配置联动
+     */
+    private void setLinkMove(){
+        //初始加载完成之后再配置联动
+        if(spnProvince.getOnItemSelectedListener() == null){
+            spnProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    KV kv = (KV) parent.getItemAtPosition(position);
+                    cityAPI.setId(kv.key);
+                    loadCity();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+        }
+
+        if(spnCity.getOnItemSelectedListener() == null){
+            spnCity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    KV kv = (KV) parent.getItemAtPosition(position);
+                    countyAPI.setId(kv.key);
+                    loadCounty();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+        }
     }
 
     /**
@@ -311,13 +315,15 @@ public class ProvinceView extends LinearLayout {
                 spnCounty.setEnabled(true);
                 int position = findSelection(countyAPI.getList(), county);
                 if(position != -1){
-                    spnCounty.setSelection(position);
                     countyAdapter.notifyDataSetChanged();
+                    spnCounty.setSelection(position);
                 }
                 //加载区完成后，将初始值归null
                 province = null;
                 city = null;
                 county = null;
+
+                setLinkMove();
             }
 
             @Override
@@ -348,5 +354,16 @@ public class ProvinceView extends LinearLayout {
             }
         }
         return position;
+    }
+
+    @Override
+    public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
+        this.spnProvince.setClickable(enabled);
+        this.spnProvince.setEnabled(enabled);
+        this.spnCity.setClickable(enabled);
+        this.spnCity.setEnabled(enabled);
+        this.spnCounty.setClickable(enabled);
+        this.spnCounty.setEnabled(enabled);
     }
 }
