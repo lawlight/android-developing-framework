@@ -61,11 +61,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':lib')
     compile project(':multi-image-selector')
-    compile project(':qrcode')
     compile project(':umeng')
     compile project(':audiorecorder')
-    compile project(':amap')
-    compile project(':ijkplayer')
 }
 
 

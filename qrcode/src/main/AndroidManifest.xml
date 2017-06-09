@@ -21,7 +21,7 @@
         </activity>
         <activity
             android:name=".activity.ScanActivity"
-            android:theme="@style/ThemeNoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity android:name=".activity.GenerateActivity">
         </activity>

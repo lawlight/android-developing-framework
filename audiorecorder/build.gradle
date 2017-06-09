@@ -9,11 +9,21 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+//        ndk{
+//            moduleName "mp3lame"  //设置库(so)文件名称
+//            ldLibs "log"
+//            abiFilters "armeabi", "armeabi-v7a"
+//        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file("src/main/jni/Android.mk")
         }
     }
 }

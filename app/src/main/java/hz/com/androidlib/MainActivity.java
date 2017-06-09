@@ -5,10 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
-
-import com.hz.qrscan.activity.QRMainActivity;
-import com.hz.qrscan.activity.ScanActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +22,6 @@ import hz.com.androidlib.listitem.ListItemActivity;
 import hz.com.androidlib.permission.PermissionDemoActivity;
 import hz.com.androidlib.record.RecordDemoActivity;
 import hz.com.androidlib.utils.UtilsDemoActivity;
-import kr.co.namee.permissiongen.PermissionFail;
-import kr.co.namee.permissiongen.PermissionGen;
-import kr.co.namee.permissiongen.PermissionSuccess;
 
 /**
  * DEMO项目
@@ -45,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         //权限申请
-        PermissionGen.with(this)
-                .addRequestCode(100)
-                .permissions(
-                        android.Manifest.permission.CAMERA)
-                .request();
+//        PermissionGen.with(this)
+//                .addRequestCode(100)
+//                .permissions(
+//                        android.Manifest.permission.CAMERA)
+//                .request();
 
         List<MainItem> list = new ArrayList<>();
         list.add(new MainItem("商城首页组件模板", "包括轮播图、秒杀倒计时、动态文字等的使用", new Intent(this, ShopIndexDemoActivity.class)));
@@ -57,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new MainItem("引导页demo", "应用第一次启动时可用的引导页demo", new Intent(this, GuideActivity.class)));
         list.add(new MainItem("分页列表与网络访问demo", "分页列表demo", new Intent(this, ListDemoActivity.class)));
         list.add(new MainItem("多图选择demo", "多图选择、图片列表、拍照的demo", new Intent(this, ImageActivity.class)));
-        list.add(new MainItem("二维码demo", "二维码扫描与生成demo", new Intent(this, QRMainActivity.class)));
+        //list.add(new MainItem("二维码demo", "二维码扫描与生成demo", new Intent(this, QRMainActivity.class)));
         list.add(new MainItem("工具类demo", "工具类的使用演示demo", new Intent(this, UtilsDemoActivity.class)));
         list.add(new MainItem("日历demo", "农历日历demo", new Intent(this, CalenderActivity.class)));
         list.add(new MainItem("音频录制demo", "录制mp3音频的demo", new Intent(this, RecordDemoActivity.class)));
@@ -101,14 +94,14 @@ public class MainActivity extends AppCompatActivity {
      * 权限申请回调
      */
 
-    @PermissionSuccess(requestCode = 100)
-    public void doSomething(){
-        Intent intent2 = new Intent(this, ScanActivity.class);
-        this.startActivityForResult(intent2, 111);
-    }
-
-    @PermissionFail(requestCode = 100)
-    public void doFailSomething(){
-        Toast.makeText(this, "打开相机失败，请设置app拍照权限", Toast.LENGTH_SHORT).show();
-    }
+//    @PermissionSuccess(requestCode = 100)
+//    public void doSomething(){
+//        Intent intent2 = new Intent(this, ScanActivity.class);
+//        this.startActivityForResult(intent2, 111);
+//    }
+//
+//    @PermissionFail(requestCode = 100)
+//    public void doFailSomething(){
+//        Toast.makeText(this, "打开相机失败，请设置app拍照权限", Toast.LENGTH_SHORT).show();
+//    }
 }

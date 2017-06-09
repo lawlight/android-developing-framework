@@ -220,10 +220,10 @@ public class Mp3Recorder {
 		
 		// Initialize the place to put mp3 file
 		if(mp3Directory == null){
-			mp3Directory = Environment.getDownloadCacheDirectory().getAbsolutePath() + "/voice";
+			mp3Directory = Environment.getDownloadCacheDirectory().getAbsolutePath() + "/record";
 		}
 		if(mp3FileName == null){
-			mp3FileName = "recording_" + new Date().getTime() + ".mp3";
+			mp3FileName = "record_" + new Date().getTime() + ".mp3";
 		}
 
 		File directory = new File(mp3Directory);
