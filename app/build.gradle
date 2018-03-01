@@ -8,8 +8,8 @@ android {
         applicationId "hz.com.androidlib"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.2"
     }
     buildTypes {
         release {
@@ -17,6 +17,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //use legacy for android 6.0
+    //useLibrary 'org.apache.http.legacy'
 
     //签名设置
     signingConfigs {
@@ -58,11 +61,15 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile project(':lib')
     compile project(':multi-image-selector')
     compile project(':umeng')
     compile project(':audiorecorder')
+
+
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
 }
 
 

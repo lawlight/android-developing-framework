@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ksoap2-android-repacked">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/libs/ksoap2-android-repacked.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

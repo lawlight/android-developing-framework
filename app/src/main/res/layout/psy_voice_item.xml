@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/pvi_btn_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/psy_voice_box"
+            android:paddingLeft="50dp"
+            android:text="5&apos;00&quot;"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/pvi_btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pvi_btn_voice"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/pvi_btn_voice"
+            android:background="#00000000"
+            android:text="删除"
+            android:textColor="@color/colorTextGray" />
+
+        <ImageView
+            android:id="@+id/pvi_iv_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pvi_btn_voice"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28dp"
+            android:src="@anim/psy_voice_item_play" />
+    </RelativeLayout>
+
+</LinearLayout>

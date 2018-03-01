@@ -11,10 +11,13 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import hz.com.androidlib.bluetooth.BLEActivity;
 import hz.com.androidlib.contact.ContactActivity;
 import hz.com.androidlib.dialog.DialogDemoActivity;
 import hz.com.androidlib.gesture.GestureDemoActivity;
 import hz.com.androidlib.guide.GuideActivity;
+import hz.com.androidlib.hellocharts.ColumnChartActivity;
+import hz.com.androidlib.hellocharts.LineChartActivity;
 import hz.com.androidlib.index.ShopIndexDemoActivity;
 import hz.com.androidlib.index.TabIndexDemoActivity;
 import hz.com.androidlib.list.ListDemoActivity;
@@ -61,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
         list.add(new MainItem("通讯录字母排序", "带搜索框", new Intent(this, ContactActivity.class)));
         list.add(new MainItem("各种常用列表项", "淘宝、腾讯新闻、抢单等列表样式", new Intent(this, ListItemActivity.class)));
         list.add(new MainItem("手势集合Demo", "第一个例子：列表项向左滑展示更多按钮", new Intent(this, GestureDemoActivity.class)));
+
+        list.add(new MainItem("蓝牙", "蓝牙通信", new Intent(this, BLEActivity.class)));
+
+        list.add(new MainItem("Hellocharts", "折线图", new Intent(this, LineChartActivity.class)));
+        list.add(new MainItem("Hellocharts", "柱状图", new Intent(this, ColumnChartActivity.class)));
 
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

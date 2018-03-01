@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="__local_jars__:/Users/LiuPeng/androidwork/android_studio_workspace/android-developing-framework/qrcode/libs/ZBarDecoder.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/qrcode/libs/ZBarDecoder.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

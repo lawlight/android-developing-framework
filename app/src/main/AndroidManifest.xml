@@ -26,6 +26,8 @@
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -38,7 +40,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- 蒲公英-待输入真实账号-->
+        <!-- 蒲公英-待输入真实账号 -->
         <meta-data
             android:name="PGYER_APPID"
             android:value="123123123123123132" />
@@ -66,8 +68,10 @@
         <activity android:name=".listitem.activity.GrabOrderActivity" />
         <activity android:name=".listitem.activity.NewsListActivity" />
         <activity android:name=".listitem.activity.WaterFallActivity" />
-        <activity android:name=".list.ListTargetActivity"></activity>
-
+        <activity android:name=".list.ListTargetActivity" />
+        <activity android:name=".bluetooth.BLEActivity" />
+        <activity android:name=".hellocharts.LineChartActivity" />
+        <activity android:name=".hellocharts.ColumnChartActivity"></activity>
     </application>
 
 </manifest>
