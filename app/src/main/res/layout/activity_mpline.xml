@@ -4,12 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="hz.com.androidlib.hellocharts.LineChartActivity">
-
-    <lecho.lib.hellocharts.view.LineChartView
-        android:id="@+id/chart"
+    tools:context="hz.com.androidlib.mpcharts.MPLineActivity">
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:padding="8dp" />
+        android:layout_height="200dp" />
 </LinearLayout>

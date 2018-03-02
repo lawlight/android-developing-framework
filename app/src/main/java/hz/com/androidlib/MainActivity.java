@@ -22,6 +22,8 @@ import hz.com.androidlib.index.ShopIndexDemoActivity;
 import hz.com.androidlib.index.TabIndexDemoActivity;
 import hz.com.androidlib.list.ListDemoActivity;
 import hz.com.androidlib.listitem.ListItemActivity;
+import hz.com.androidlib.mpcharts.MPColumnActivity;
+import hz.com.androidlib.mpcharts.MPLineActivity;
 import hz.com.androidlib.permission.PermissionDemoActivity;
 import hz.com.androidlib.record.RecordDemoActivity;
 import hz.com.androidlib.utils.UtilsDemoActivity;
@@ -66,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         list.add(new MainItem("手势集合Demo", "第一个例子：列表项向左滑展示更多按钮", new Intent(this, GestureDemoActivity.class)));
 
         list.add(new MainItem("蓝牙", "蓝牙通信", new Intent(this, BLEActivity.class)));
+
+        list.add(new MainItem("MPChart", "折线图", new Intent(this, MPLineActivity.class)));
+        list.add(new MainItem("MPChart", "柱状图", new Intent(this, MPColumnActivity.class)));
 
         list.add(new MainItem("Hellocharts", "折线图", new Intent(this, LineChartActivity.class)));
         list.add(new MainItem("Hellocharts", "柱状图", new Intent(this, ColumnChartActivity.class)));

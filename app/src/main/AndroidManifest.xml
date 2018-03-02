@@ -71,7 +71,9 @@
         <activity android:name=".list.ListTargetActivity" />
         <activity android:name=".bluetooth.BLEActivity" />
         <activity android:name=".hellocharts.LineChartActivity" />
-        <activity android:name=".hellocharts.ColumnChartActivity"></activity>
+        <activity android:name=".hellocharts.ColumnChartActivity" />
+        <activity android:name=".mpcharts.MPLineActivity" />
+        <activity android:name=".mpcharts.MPColumnActivity"></activity>
     </application>
 
 </manifest>
